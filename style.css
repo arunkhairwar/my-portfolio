@@ -7,10 +7,12 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+   
 }
 body{
     width: 100%;
     height: 100%;
+    background-color: black;
 }
 #main{
     width: 100%;
@@ -63,9 +65,105 @@ body{
     text-transform: uppercase;
 } 
 
+.smallheading {
+    margin-top: 100px;
+    padding-right: 50px;
+} 
+
 .smallheading h5 {
     text-transform: uppercase;
+    margin-top: .5vw;
+    font-size: 1vw;
+    color: white;
     text-align: right;
-    margin-top: 200px;
-    margin-right: 20px;
+    
 } 
+.herofooter {
+    background-color: black;
+    padding: 0;
+    margin-top: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 3px;
+    width: 100%;
+}
+.herofooter a{
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.herofooter #iconset{
+    display: flex;
+    gap: 5px;
+}
+.herofooter .circle { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #888;
+} 
+#second {
+    padding-right: 10vw;
+    padding-top:  200px;
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+}
+#second .elem{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    width: 100%;
+    padding: 3.5vh 3vh;
+    padding-right: 0;
+    border-top: 1px solid #888;
+}
+.elem h5 {
+    font-weight: 400;
+}
+.elem h1 {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 7.5vw;
+    opacity: .6;
+} 
+.elemlast {
+    border-bottom: 1px solid #888;
+} 
+.elem img {
+    display: none;
+    /* opacity: 0; */
+    position: absolute;
+    z-index: 999;
+    height:140%;
+} 
+/* .plug:hover img {
+    opacity: 100%;
+} */
+
+#about{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 10vw 10vw;
+    padding-left: 30vw;
+    width: 100%;
+    background-color: aquamarine;
+}
+#about img {
+   
+    width: 230px
+}
+#textAbout p{
+   font-weight: 500;
+   font-size: 1.3vw;
+}
