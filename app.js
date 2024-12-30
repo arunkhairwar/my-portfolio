@@ -36,11 +36,12 @@ function circleShrink() {
     xprev = dets.clientX;
     yprev = dets.clientY;
 
-    circleMouseFollower(xScale,yScale);
-  timeout =  setTimeout(() => {
-        document.querySelector("#miniCircle").style.transform = `translate(${dets.clientX}px, ${dets.clientY}px) scale(${xScale}, ${yScale})` ;
+    circleMouseFollower(xScale, yScale);
+    timeout = setTimeout(() => {
+      document.querySelector(
+        "#miniCircle"
+      ).style.transform = `translate(${dets.clientX}px, ${dets.clientY}px) scale(${xScale}, ${yScale})`;
     }, 100);
-
   });
 }
 
@@ -48,7 +49,7 @@ function circleMouseFollower(xScale, yScale) {
   window.addEventListener("mousemove", function (dets) {
     document.querySelector(
       "#miniCircle"
-    ).style.transform = `translate(${dets.clientX}px, ${dets.clientY}px) scale(1,1)` ;
+    ).style.transform = `translate(${dets.clientX}px, ${dets.clientY}px) scale(1,1)`;
   });
 }
 circleShrink();
@@ -56,9 +57,16 @@ circleMouseFollower();
 //firstPageAnim();
 
 
-document.querySelectorAll(".elem")
-.forEach(function(elem) {
-  elem.addEventListener("mousemove",function(detailes){
-    console.log(detailes.clientX, detailes.clientY);
+  document.querySelectorAll(".elem").forEach(function (elem) {
+    elem.addEventListener("mousemove", function (dets) { 
+
+      var topDiff = dets.clientY - elem.getBoundingClientRect().top;
+      gsap.to(elem.querySelector("img"), {
+        opacity: 1,
+        ease: Power1,
+        top: topDiff,
+        left:dets.clientX
+        
+      });
+    });
   });
-});
